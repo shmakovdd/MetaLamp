@@ -1,0 +1,10 @@
+{
+  "dark-shade50": "rgba(31, 32, 65, 0.5)",
+  "purple": "#BC9CFF",
+  "links-color": "#4b6fd7",
+  "errors-color": "#cd1515",
+  "bp-desktop-hd": "1985px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px"
+}

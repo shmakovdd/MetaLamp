@@ -1,0 +1,33 @@
+@mixin desktopHd() {
+  @media screen and (min-width: $bp-desktop-hd) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: $bp-tablets) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: $bp-phones) {
+    @content;
+  }
+}
+
+@mixin font-face($font-family, $weight: normal, $style: normal) {
+  @font-face {
+      font-family: $font-family;
+      font-weight: $weight;
+      font-style: $style;
+      src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+      
+  }
+}
