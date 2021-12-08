@@ -1,3 +1,5 @@
+
+
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -10,7 +12,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = "/";
+  const publicPath = 'file:///C:/Users/Denis/Desktop/MetaLamp/dist/';
 
   const pcss = {
     test: /\.(p|post|)css$/,
@@ -62,7 +64,7 @@ module.exports = (env, argv) => {
             { removeTitle: true },
             {
               removeAttrs: {
-                
+                attrs: "(fill|stroke)",
               },
             },
           ],
@@ -87,7 +89,6 @@ module.exports = (env, argv) => {
   const config = {
     entry: {
       main: "./src/main.js",
-      admin: "./src/admin/main.js",
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
@@ -101,8 +102,8 @@ module.exports = (env, argv) => {
     resolve: {
       alias: {
         vue$: "vue/dist/vue.esm.js",
+        jquery: "jquery/src/jquery",
         images: path.resolve(__dirname, "./src/images"),
-        components: path.resolve(__dirname, "./src/admin/components"),
         styles: path.resolve(__dirname, "./src/styles"),
       },
       extensions: ["*", ".js", ".vue", ".json"],
@@ -116,14 +117,26 @@ module.exports = (env, argv) => {
       hints: false,
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+      }),
       new HtmlWebpackPlugin({
         template: "src/index.pug",
         chunks: ["main"],
       }),
       new HtmlWebpackPlugin({
-        template: "src/admin/index.pug",
-        filename: "admin/index.html",
-        chunks: ["admin"],
+        template: "src/registration.pug",
+        filename: "registration.html",
+      }),
+      new HtmlWebpackPlugin({
+        template: "src/login.pug",
+        filename: "login.html",
+      }),
+      new HtmlWebpackPlugin({
+        template: "src/roomdetails.pug",
+        filename: "roomdetails.html",
+        chunks: ["main"],
       }),
       new SpriteLoaderPlugin({ plainSprite: true }),
       new VueLoaderPlugin(),

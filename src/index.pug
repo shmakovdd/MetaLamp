@@ -1,30 +1,33 @@
-include ./mixins.pug
+include ./sections/mixins.pug
 
-<!DOCTYPE html>
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
-    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    title MegaLamp | main page
   body
     .wrapper 
-      .container
-        header.header
-          .logo
-            +image('logo.png', 'logo__img')
-          nav.header__nav.nav
-            ul.nav__list 
-              li.nav__item О нас
-              li.nav__item Услуги
-                span.material-icons-outlined expand_more
-              li.nav__item Вакансии
-              li.nav__item Новости
-              li.nav__item Соглашения
-                span.material-icons-outlined expand_more
-          button.header__login-btn.button.button--white Войти   
-          button.header__rgstr-btn.button зарегестрироваться
+
+      include ./sections/header
+
+      main.main-section.main-section--landing
+        .main-section__container.container
+
+          include ./sections/welcome_card
+          .main-section__extra-text 
+            p Лучшие номера для вашей работы, отдыха и просто вдохновения
+             
+
+        
+            
+      include ./sections/footer
+
+
+            
+          
+   
 
 
            

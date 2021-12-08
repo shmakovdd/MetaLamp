@@ -1,0 +1,36 @@
+
+form(class="main-section__card card", id='regForm')
+    .card__title.title.title--centered Регистрация аккаунта
+    .card__row 
+        input(class = 'card__input input', placeholder = 'Имя')
+    .card__row
+        input(class = 'card__input input', placeholder = 'Фамилия')     
+    .card__row.card__radios
+        label.card__label.card__label--flex
+            input(type="radio" class = 'card__radio' name='sex' checked) 
+            .card__fake-radio
+            .card__subtitle.card__subtitle--radio Спермобак
+        label.card__label.card__label--flex
+            input(type="radio" class = 'card__radio' name='sex') 
+            .card__fake-radio
+            .card__subtitle.card__subtitle--radio Женщина
+        label.card__label.card__label--flex
+            input(type="radio" class = 'card__radio' name='sex') 
+            .card__fake-radio
+            .card__subtitle.card__subtitle--radio QLGBT+      
+    .card__row.card__row--wrap    
+        .card__subtitle.card__subtitle--margin данные для входа в сервис
+        input(class = 'card__input input', placeholder = 'Email')
+    .card__row        
+            input(class = 'card__input input', placeholder = 'Пароль')
+    .card__row
+        label.card__switch.switch
+            input(class = "switch__checkbox" type= "checkbox" checked)
+            .switch__switcher
+            .card__subtitle Получать спецпредложения
+    .card__row 
+        a(class="card__button button button--purple" href="registration.html") Зарегестрироваться
+                span.material-icons arrow_forward
+    .card__row.card__row--align 
+        .card__text Уже есть аккаунт на Toxin
+        a(class='card__button button button--white' href="login.html") Войти    

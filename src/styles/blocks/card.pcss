@@ -1,0 +1,205 @@
+.card {
+    padding: 37px 30px;
+    width: 380px;
+    background-color: #fff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    
+    &__fake-radio {
+        position: relative;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 50%;
+        margin-right: 10px;
+        
+        
+        &::after {
+            display: block;
+            content: '';
+            width: 0px;
+            height: 0px;
+            background: transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s all ease-in-out;
+        }
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked ~ .card__fake-radio::after {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            width: 12px;
+            height: 12px;
+            transition: all .3;
+        }
+
+        &:checked ~ .card__fake-radio {
+            border: 1px solid #BC9CFF;
+        }
+    }
+
+    
+
+    &__subtitle {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+        color: $dark100;
+
+        &--margin {
+        margin-bottom: 5px;
+        }
+
+        &--radio {
+            text-transform: none;
+            font-size: 14px;
+            color: $dark-shade75;
+            font-weight: normal;
+        }
+    }
+
+
+
+    &--centered {
+        margin: 0 auto;
+    }
+
+    &__row--wrap {
+        flex-wrap: wrap;
+    }
+
+    &__label {
+        flex: 1;
+        // cursor: pointer;
+        position: relative;
+        &--short {
+            margin-right: 20px;
+            width: 150px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        &--flex {
+            display: flex;
+            align-items: center;
+            flex: 0;
+            margin-right: 20px;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+
+        span {
+            position: absolute;
+            color: $dark-shade50;
+            top: 50%;
+            right: 5%;
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 23px;
+
+        &:last-child {
+            margin: 0;
+        }
+        &--align {
+            align-items: center;
+        }
+        &--align-text {
+            align-items: flex-end;
+        }
+    }
+    
+
+    &__radios {
+        display: flex;
+    }
+
+    &__text {
+        margin-right: 30px;
+        white-space: nowrap;
+    }
+
+    &__numbersign {
+        color: $dark100;
+        font-weight: 700;
+    }
+
+    &__day-price {
+        font-weight: 700;
+    }
+
+    &__num {
+        font-size: 24px;
+        color: $dark100;
+        margin-right: 5px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__type {
+        color: $purple;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: auto;
+    }
+
+    &__check-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__check-item {
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__total span, &__total-price {
+        font-weight: 700;
+        font-size: 19px;
+        color: $dark100;
+    }
+
+    &__total {
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+    }
+    &__separator {
+        height: 1px;
+        border: 1px dashed $dark-shade25;
+        flex: 1
+    }
+
+    .card__button {
+        position: relative;
+        font-size: 12px;
+        width: 100%;
+        height: 44px;
+    }
+
+    .card__button span {
+        position: absolute;
+        right: 5%;
+    }
+
+
+}   

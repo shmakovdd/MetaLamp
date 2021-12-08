@@ -1,0 +1,142 @@
+.main-section {
+    &__extra-text {
+        position: absolute;
+        bottom: 18px;
+        right: 134px;
+        width: 300px;
+        text-align: right;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__room-reviews {
+        position: relative;
+    }
+
+    &__reviews-number {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__room-photos {
+        flex-wrap: wrap;
+        width: 981px;
+        height: 485px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 70px;
+    }
+
+    &__photos-container {
+        padding: 0;
+    }
+
+    &__content-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__room-features {
+        width: 50%;
+    }
+
+    &__room-descr {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    &__room-evaluations-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__room-evaluations-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    &__room-evaluations {
+        width: 50%;
+    }
+
+    &__room-card {
+        margin-left: 65px;
+        align-self: flex-start;
+    }
+
+    &__room-evaluations-list {
+        align-self: flex-end;
+    }
+
+    &__room-evaluations-color {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    &__room-evaluations-color.first {
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    }
+    
+    &__room-evaluations-color.second {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+
+    &__room-evaluations-color.third {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &__room-evaluations-color.fourth {
+        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+    }
+    &__photo-wrapper--first {
+        height: 100%;
+    }
+
+    &__photo-wrapper--second, __photo-wrapper--third {
+        height: 50%;
+    }
+
+    &__rules, &__cancel {
+        width: 50%;
+    }
+
+    &__rules-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__rules-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $dark-shade25;
+        margin-right: 10px;
+    }
+
+    &--landing {
+        height: 900px;
+        background: url(../images/content/image3.jpg) center center / cover no-repeat;
+        position: relative;
+        padding-top: 70px;
+    }
+
+    &--welcome {
+        height: 900px;
+        background: url(../images/content/register_image.jpg) center center / cover no-repeat;
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        
+        .card {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    
+}

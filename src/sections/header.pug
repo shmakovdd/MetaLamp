@@ -1,0 +1,15 @@
+header.header
+    .container.header__container
+        a(class="logo" href="index.html")      
+            +image('logo.png', 'logo__img')
+        nav.header__nav.nav
+            ul.nav__list 
+                li.nav__item О нас
+                li.nav__item Услуги
+                    span.material-icons-outlined expand_more
+                li.nav__item Вакансии
+                li.nav__item Новости
+                li.nav__item Соглашения
+                    span.material-icons-outlined expand_more
+        a(class="header__login-btn button button--white" href="login.html") Войти   
+        a(class="header__rgstr-btn button button--purple" href="registration.html") зарегестрироваться

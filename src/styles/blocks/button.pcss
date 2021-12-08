@@ -1,16 +1,36 @@
 .button {
-    color: white;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    height: 44px;
+    height: 34px;
     text-transform: uppercase;
     border-radius: 22px;
     font-style: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
-    padding: 10px 20px;
-    transition: opacity .4s;
-    &:hover, &:active {
-        opacity: .5;
+    padding: 10px 23px;
+    transition: all .4s;
+ 
 
+    &--purple {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: white;
+        &:hover, &:active {
+            opacity: .5;
+    
+        }
+    }
+
+    &--grey {
+        border: 1px solid $dark-shade25;
+        background-color: white;
+        color: $dark-shade25;
+        &:hover, &:active {
+            background: 
+            linear-gradient(#fff,#fff) padding-box,
+            linear-gradient(#BC9CFF, #8BA4F9) border-box;
+            border: 1px solid transparent;
+            color: $purple;
+        }
     }
 
     &--white {
@@ -18,7 +38,11 @@
         background: 
         linear-gradient(#fff,#fff) padding-box,
         linear-gradient(#BC9CFF, #8BA4F9) border-box;
-       border: 2px solid transparent;
+       border: 1px solid transparent;
+       &:hover, &:active {
+        opacity: .5;
+
+    }
     }
 
 }

@@ -1,0 +1,160 @@
+include ./sections/mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        .wrapper
+            include ./sections/header
+            main.main-section.main-section--room
+                .main-section__photos-container.container
+                    .main-section__room-photos 
+                        .main-section__photo-wrapper--first 
+                            +image('room-example1.jpg', 'main-section__room-photo')
+                        .main-section__photo-wrapper--second 
+                            +image('room-example2.jpg', 'main-section__room-photo')
+                        .main-section__photo-wrapper--third 
+                            +image('room-example3.jpg', 'main-section__room-photo')
+                .main-section__content
+                    .main-section__content-container.container
+                        .main-section__room-descr
+                            .main-section__room-features
+                                h3.main-section__title.title.title--fs19 Сведения о номере
+                                ul.main-section__features__list
+                                    li.main-section__feature.feature
+                                        .feature__image.feature__image--smile
+                                        .feature__content
+                                            .feature__title Комфорт
+                                            .feature__descr Шумопоглощающие стены
+                                    li.main-section__feature.feature
+                                        .feature__image.feature__image--city
+                                        .feature__content
+                                            .feature__title Удобство
+                                            .feature__descr Окно в каждой из спален
+                                    li.main-section__feature.feature
+                                        .feature__image.feature__image--fire
+                                        .feature__content
+                                            .feature__title Уют
+                                            .feature__descr Номер оснащен камином      
+                            .main-section__room-evaluations                
+                                h3.main-section__title.title.title--fs19 Впечатления от номера
+                                .main-section__room-evaluations-wrapper       
+                                    .main-section__diagram.diagram        
+                                        svg.diagram__piece(width='120' height='120' viewBox="0 0 35 35")
+                                            linearGradient#gradient
+                                                stop(offset="100%" stop-color=" #BC9CFF")
+                                                stop(offset="100%" stop-color="#8BA4F9")
+                                            circle.donut-segment(cx='17' cy='18' r='15.91549430918954' fill='none' stroke='url(#gradient)' stroke-width='1.5' stroke-dasharray="49.5 50.5" stroke-dashoffset='75')
+                                        svg.diagram__piece(width='120' height='120' viewBox="0 0 35 35")
+                                            linearGradient#gradient2
+                                                stop(offset="100%" stop-color=" #6FCF97")
+                                                stop(offset="100%" stop-color="#66D2EA")
+                                            circle.donut-segment(cx='17' cy='18' r='15.91549430918954' fill='transparent' stroke='url(#gradient2)' stroke-width='1.5' stroke-dasharray="24.5 75.5" stroke-dashoffset='0')
+                                        svg.diagram__piece(width='120' height='120' viewBox="0 0 35 35")
+                                            linearGradient#gradient3
+                                                stop(offset="100%" stop-color="#FFE39C")
+                                                stop(offset="100%" stop-color="#FFBA9C")
+                                            circle.donut-segment(cx='17' cy='18' r='15.91549430918954' fill='none' stroke='url(#gradient3)' stroke-width='1.5' stroke-dasharray="24.5 75.5" stroke-dashoffset='25')
+                                        .diagram__text
+                                            span.diagram__number 250
+                                            span.diagram__word голосов
+                                    ul.main-section__room-evaluations-list
+                                        li.main-section__room-evaluations-item 
+                                            .main-section__room-evaluations-color.first 
+                                            .main-section__room-evaluations-name Великолепно    
+                                        li.main-section__room-evaluations-item 
+                                            .main-section__room-evaluations-color.second 
+                                            .main-section__room-evaluations-name Хорошо                                         
+                                        li.main-section__room-evaluations-item 
+                                            .main-section__room-evaluations-color.third 
+                                            .main-section__room-evaluations-name Удовлетворительно
+                                        li.main-section__room-evaluations-item 
+                                            .main-section__room-evaluations-color.fourth 
+                                            .main-section__room-evaluations-name Разочарован  
+                            .main-section__room-reviews 
+                                h3.main-section__title.title.title--fs19 Отзывы посетителей номера
+                                span.main-section__reviews-number 2 отзыва               
+                                .main-section__review.review
+                                    .review__left 
+                                        .review__img-wrapper 
+                                            +image('aphex.jpg', 'review__img')
+                                        button.review__like-btn.button.button--grey
+                                            span.material-icons favorite_border
+                                            span.review__like-value 12
+                                    .review__right
+                                        .review__name Мурад Сарафанов
+                                        .review__date 5 дней назад
+                                        p.review__descr Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                                .main-section__review.review
+                                    .review__left 
+                                        .review__img-wrapper 
+                                            +image('aphex.jpg', 'review__img')
+                                        button.review__like-btn.button.button--white
+                                            span.material-icons favorite
+                                            span.review__like-value 12
+                                    .review__right
+                                        .review__name Мурад Сарафанов
+                                        .review__date 5 дней назад
+                                        p.review__descr Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.        
+                            .main-section__rules 
+                                h3.main-section__title.title.title--fs19 Правила
+                                ul.main-section__rules-list 
+                                    li.main-section__rules-item
+                                        .main-section__rules-dot 
+                                        .main-section__rule Нельзя с питомцами
+                                    li.main-section__rules-item
+                                        .main-section__rules-dot 
+                                        .main-section__rule Без вечеринок и мероприятий
+                                    li.main-section__rules-item
+                                        .main-section__rules-dot 
+                                        .main-section__rule Время прибытия - после 13:00, а выезд до 12:00      
+                            .main-section__cancel
+                                h3.main-section__title.title.title--fs19 Отмена
+                                p.main-section__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.    
+                        
+                        
+                        form(class='main-section__room-card card' id='bookingForm')
+                            .card__row.card__row--align-text
+                                span.card__numbersign №
+                                span.card__num 888
+                                span.card__type ЛЮКС
+                                span.card__day-price 9 990₽ 
+                                span.card__day-span в сутки               
+                            .card__row
+                                label.card__label.card__label--short
+                                    .card__subtitle.card__subtitle--margin Прибытие
+                                    input(class = 'card__input input', id= 'first-input' placeholder = 'дд.мм.гггг') 
+                                    span.material-icons-outlined expand_more
+                                label.card__label.card__label--short
+                                    .card__subtitle.card__subtitle--margin Выезд
+                                    input(class = 'card__input input', id= 'second-input' placeholder = 'дд.мм.гггг') 
+                                    span.material-icons-outlined expand_more 
+                            .card__row
+                                label(id = 'dropdown', class= 'card__label')
+                                    .card__subtitle.card__subtitle--margin Гости
+                                    input(class = 'card__input input', placeholder = 'Сколько гостей' readonly) 
+                                    span.material-icons-outlined expand_more
+                            .card__row 
+                                .card__check-list 
+                                    .card__check-item 
+                                        span.card__service-name 9 990₽ х 4 суток
+                                        span.card__service-price 39 960₽
+                                    .card__check-item 
+                                        span.card__service-name Сбор за дополнительные услуги
+                                        span.card__service-price 0₽
+                                    .card__check-item 
+                                        span.card__service-name Сбор за услуги: скидка 2 179₽
+                                        span.card__service-price 300₽                                            
+                            .card__row
+                                .card__total 
+                                    span Итого
+                                    .card__separator
+                                    span.card__total-price 38 081₽
+                            .card__row    
+                                a(class="card__button button button--purple" href="registration.html") забронировать  
+                                    span.material-icons arrow_forward           
+            include ./sections/footer                        

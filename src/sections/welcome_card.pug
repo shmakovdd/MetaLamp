@@ -1,0 +1,19 @@
+
+form(class="main-section__card card", id='welcomeForm')
+    .card__title.title Найдём номера под <br>ваши пожелания
+    .card__row
+        label.card__label.card__label--short
+            .card__subtitle.card__subtitle--margin Прибытие
+            input(class = 'card__input input', id= 'first-input' placeholder = 'дд.мм.гггг') 
+            span.material-icons-outlined expand_more
+        label.card__label.card__label--short
+            .card__subtitle.card__subtitle--margin Выезд
+            input(class = 'card__input input', id= 'second-input' placeholder = 'дд.мм.гггг') 
+            span.material-icons-outlined expand_more
+    .card__row
+        label(id = 'dropdown', class= 'card__label')
+            .card__subtitle.card__subtitle--margin Гости
+            input(class = 'card__input input', placeholder = 'Сколько гостей' readonly) 
+            span.material-icons-outlined expand_more
+    a(class="card__button button button--purple" href="registration.html") Подобрать номер   
+        span.material-icons arrow_forward
